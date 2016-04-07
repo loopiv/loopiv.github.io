@@ -6,14 +6,12 @@ Below is a snippet from my hiera config.  You'll need to adjust the module names
 
     classes:
       - mysql::server
-
 		#
 		# MySQL server
 		#
 		mysql::server::package_name: 'MariaDB-server' # For MariaDB
 		mysql::server::package_manage: false # For MariaDB
 		mysql::server::service_name: 'mysql' # For MariaDB
-
 		#
 		# Files
 		#
@@ -23,7 +21,6 @@ Below is a snippet from my hiera config.  You'll need to adjust the module names
 		    owner: 'mysql'
 		    group: 'mysql'
 		    require: 'Package[MariaDB-server]'
-
 		#
 		# Packages
 		#
@@ -36,7 +33,6 @@ Below is a snippet from my hiera config.  You'll need to adjust the module names
 		    ensure: absent
 		    provider: 'rpm'
 		    uninstall_options: '--nodeps'
-
 		#
 		# Yum repos
 		#
