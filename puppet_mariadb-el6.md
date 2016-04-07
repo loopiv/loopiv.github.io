@@ -4,6 +4,7 @@
 
 Below is a snippet from my hiera config.  You'll need to adjust the module names for your local hiera-tized defined types.  There's the rest of the config that will need to go in for your local instance as well (apache, more mysql stuff, etc...).
 
+```
 classes:
   - mysql::server
 
@@ -45,3 +46,4 @@ system::yumrepos:
     descr: 'MariaDB 10.1 CentOS repository'
     gpgkey: 'https://yum.mariadb.org/RPM-GPG-KEY-MariaDB'
     baseurl: 'http://yum.mariadb.org/10.1/centos6-amd64'
+```
